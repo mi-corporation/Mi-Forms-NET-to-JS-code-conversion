@@ -1,11 +1,12 @@
 $(document).ready(function(){
 	$("#NETToJSForSetFieldValueFromFieldValueButton").click(function(){
 		var netCode = $("#NETToJSForSetFieldValueFromFieldValue_NET")[0].value;
-		var jsCode = netToJSForSetFieldValueFromFieldValue(netCode);
+		var prefix = $("#NETToJSForSetFieldValueFromFieldValue_Prefix")[0].value;
+		var jsCode = netToJSForSetFieldValueFromFieldValue(netCode, prefix);
 		$("#NETToJSForSetFieldValueFromFieldValue_JS")[0].value = jsCode;
 	});
 
-	var netToJSForSetFieldValueFromFieldValue = function(str){
+	var netToJSForSetFieldValueFromFieldValue = function(str, prefix){
 		var result = "";
 		var startTo = 0;
 		var endTo = 0;
@@ -38,7 +39,7 @@ $(document).ready(function(){
 					inProcessFrom = false;
 					fromSide = false;
 					if ((startTo < endTo) && (endTo < startFrom) && (startFrom < endFrom)) {
-						result = result + "_form.setValue(\"iOS_" + str.substring(startTo, endTo) + "\", _form.getValue(\"iOS_" + str.substring(startFrom, endFrom) + "\"));\r\n";
+						result = result + "_form.setValue(\"" + prefix + str.substring(startTo, endTo) + "\", _form.getValue(\"" + prefix  + str.substring(startFrom, endFrom) + "\"));\r\n";
 					}
 					else {
 						return "Something went wrong with the code conversion. Current result is: " + result;
