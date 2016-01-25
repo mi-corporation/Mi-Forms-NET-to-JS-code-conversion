@@ -1,0 +1,35 @@
+body {
+	padding: 30px;
+}
+
+.JS {
+	width: 50%;
+	float: right;
+	padding: 20px;
+}
+
+.NET {
+	width: 50%;
+	padding: 20px;
+}
+
+.NET .input-group {
+	width:100%;
+}
+
+.action {
+	width: 50px;
+	margin: auto;
+}
+
+.input-group {
+	padding-bottom: 30px;
+}
+
+.input-group .code-input  {
+	width:100%;
+}
+
+
+
+
