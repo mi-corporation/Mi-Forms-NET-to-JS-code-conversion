@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html land="en-us">
   <head>
+    <meta charset="utf-8"> 
     <title>Convert .NET code to JS code</title>
     <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
     <script src="./script.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./style.css">
   </head>
   <body>
     <div>
-    <p>Copy your .NET code here for setting field value from value of another field:</p>
-    <textarea id="NETToJSForSetFieldValueFromFieldValue_NET" class="code-input" rows="10" columns="50"></textarea>
+      <h3>Mi-Forms: Convert .NET code to Javascript code for setting values of fields with values of other fields</h3>
     </div>
-    <div>
-    <p>Add the prefix for iOS form fields. Leave this blank if no prefix.</p>
-    <textarea id="NETToJSForSetFieldValueFromFieldValue_Prefix" class="code-input" rows="1" columns="50"></textarea>
+    <div class="JS input-group">
+    <p>JavaScirpt code generated:</p>
+    <textarea id="NETToJSForSetFieldValueFromFieldValue_JS" class="code-input form-control" rows="10" columns="50"></textarea>
     </div>
-    <div>
-    <button id="NETToJSForSetFieldValueFromFieldValueButton">Convert to JS code</button>
+    <div class="NET">
+      <div class="input-group">
+        <p>Copy your .NET code here:</p>
+        <textarea id="NETToJSForSetFieldValueFromFieldValue_NET" class="code-input form-control" rows="10" columns="50"></textarea>
+      </div>
+      <div class="input-group">
+        <p>Add the prefix for JavaScript form fields. Leave this blank if no prefix.</p>
+        <textarea id="NETToJSForSetFieldValueFromFieldValue_Prefix" class="code-input form-control" rows="1" columns="50"></textarea>
+      </div>
     </div>
-    <div>
-    <p>JS code generated:</p>
-    <textarea id="NETToJSForSetFieldValueFromFieldValue_JS" class="code-input" rows="10" columns="50"></textarea></div>
+    <div class="action input-group">
+    <button id="NETToJSForSetFieldValueFromFieldValueButton" type="button" class="btn btn-default">Convert to JS code</button>
+    </div>
   </body>
 </html>
 
